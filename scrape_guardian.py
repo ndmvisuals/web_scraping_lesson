@@ -53,7 +53,14 @@ for headline in all_headlines: # a for loop that get the url and text for each h
 
 """# Save Results"""
 
-file = open(f'./results/guardian_headlines_{time.strftime("%Y%m%d-%H%M%S")}.csv', "w")
+# Save html
+with open(f'./html_download/guardian_headlines_{time.strftime("%Y%m%d-%H%M%S")}.html, "w") as f:
+    f.write(page.text)
+
+
+# Save csv
+
+file = open(f'./csv_results/guardian_headlines_{time.strftime("%Y%m%d-%H%M%S")}.csv', "w")
 headers = ["headline", "url"]
 writer = csv.writer(file)
 writer.writerow(headers)
