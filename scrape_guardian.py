@@ -54,7 +54,7 @@ for headline in all_headlines: # a for loop that get the url and text for each h
 """# Save Results"""
 
 # Save html
-with open(f'./html_download/guardian_headlines_{time.strftime("%Y%m%d-%H%M%S")}.html, "w") as f:
+with open(f'./html_download/guardian_headlines_{time.strftime("%Y%m%d-%H%M%S")}.html', "w") as f:
     f.write(page.text)
 
 
